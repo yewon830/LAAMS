@@ -14,7 +14,6 @@ RUN npm run build
 FROM nginx:latest
 
 
-
 COPY ./Nginx.conf /etc/nginx/conf.d/react.conf
 
 COPY --from=builder /app/build /usr/share/nginx/html
